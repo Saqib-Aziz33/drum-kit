@@ -16,6 +16,14 @@ body{
   background: var(--clr-secondary);
 }
 
+::-webkit-scrollbar{
+  width: 10px;
+}
+::-webkit-scrollbar-thumb{
+  background-color: var(--clr-dark);
+  border-radius: 50px;
+}
+
 #root{
   min-height: 100vh;
   display: flex;
@@ -30,17 +38,20 @@ body{
   width: 90vw;
   padding: 1rem;
   border-radius: 20px;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.4);
   backdrop-filter: blur(2px);
   display: flex;
+  column-gap: 2rem;
   justify-content: center;
   flex-wrap: wrap;
   align-items: center;
   box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.1);
+  animation: bgcolor 2s ease infinite alternate;
 }
 
 
 .drums button{
+  transition: all 0.2s ease;
   background-color: transparent;
   border: 5px outset var(--clr-dark);
   font-size: 1.5rem;
@@ -49,8 +60,15 @@ body{
   height: 150px;
   width: 150px;
   border-radius: 20px;
+  letter-spacing: 5px;
   margin: 1rem;
-  cursor: pointer;
+  cursor: url('./media/drum.png'), url('./media/drum.png'), default;
+}
+.drums button:active{
+  font-size: 1.2rem;
+  box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.2);
+  background-color: var(--clr-dark);
+  color: var(--clr-secondary);
 }
 .drums .key{
   font-family: var(--ff-primary);
@@ -64,6 +82,7 @@ body{
   padding: 2px;
   border-radius: 20px;
   display: inline-block;
+  letter-spacing: 0;
 }
 
 
@@ -100,5 +119,14 @@ body{
     height: 100px;
     width: 100px;
     font-size: 1rem;
+  }
+}
+
+@keyframes bgcolor {
+  from{
+    background-color: #f6fff8A4;
+  }
+  to{
+    background-color: #fffcf2A4;
   }
 }
