@@ -1,9 +1,12 @@
+import Drums from './components/Drums'
 // others
 import './App.css'
 
 function App() {
   return (
-    <div>App</div>
+    <>
+      <Drums />
+    </>
   )
 }
 export default App

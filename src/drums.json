@@ -1,0 +1,27 @@
+[
+    {
+        "name": "Kick",
+        "src": "assets/kick.wav",
+        "key": "a"
+    },
+    {
+        "name": "Clap",
+        "src": "assets/clap.wav",
+        "key": "s"
+    },
+    {
+        "name": "Snare",
+        "src": "assets/snare.wav",
+        "key": "d"
+    },
+    {
+        "name": "Hit",
+        "src": "assets/hit.wav",
+        "key": "f"
+    },
+    {
+        "name": "Hat",
+        "src": "assets/hat.wav",
+        "key": "g"
+    }
+]
